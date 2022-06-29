@@ -1,0 +1,76 @@
+<div class="container mt-5">
+    <div class="card">
+        <h5 class="card-header">
+            Editar Auto
+        </h5>
+        <div class="card-body">
+            {{#each cars}}
+            <form action="" method="POST">
+                <input 
+                    type="text" 
+                    class="form-control mt-3" 
+                    name="patente" 
+                    placeholder="Patente"
+                    value="{{patente}}"
+                />
+                <input 
+                    type="text" 
+                    class="form-control mt-3" 
+                    name="chasis" 
+                    placeholder="Chasis"
+                    value="{{chasis}}"
+                />
+                <input 
+                    type="text" 
+                    class="form-control mt-3" 
+                    name="ano"
+                    placeholder="Año"
+                    value="{{ano}}"
+                />
+                <input 
+                    type="text" 
+                    class="form-control mt-3" 
+                    name="marca" 
+                    placeholder="Marca"
+                    value="{{marca}}"
+                />
+                <input 
+                    type="text" 
+                    class="form-control mt-3" 
+                    name="modelo" 
+                    placeholder="Modelo"
+                    value="{{modelo}}"
+                />
+                <input 
+                    type="text" 
+                    class="form-control mt-3" 
+                    name="color" 
+                    placeholder="Color"
+                    value="{{color}}"
+                />
+                <Select 
+                    name="seguro" 
+                    id="seguro" 
+                    class="form-control mt-3"
+                >
+                    <option disabled>Tiene seguro?</option>
+                    {{#if seguro}}
+                    <option value="true" selected>Si</option>
+                    <option value="false">No</option>
+                    {{else}}
+                    <option value="true">Si</option>
+                    <option value="false" selected>No</option>
+                    {{/if}}
+                </Select>
+
+                <button 
+                    type="submit"
+                    class="btn btn-dark mt-3 col-12"
+                >
+                    Enviar
+                </button>
+            </form>
+            {{/each}}
+        </div>
+    </div>
+</div>
